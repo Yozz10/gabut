@@ -31,7 +31,7 @@ export default function Linkboard() {
 
       <div className="bg-white/40 backdrop-blur-md p-8 rounded-3xl shadow-2xl max-w-sm w-full border border-white/50 relative z-10">
         <img
-          src="https://pomf2.lain.la/f/w6orjdvt.jpg"
+          src="https://pomf2.lain.la/f/0y73mdb9.mp4"
           alt="Avatar"
           className="w-28 h-28 rounded-full mx-auto border-4 border-pink-400 shadow-md animate-bounce-slow"
         />
