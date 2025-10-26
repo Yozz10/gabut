@@ -19,7 +19,7 @@ export default function Linkboard() {
         />
 
         <h1 className="text-2xl font-bold text-pink-700">@Riyo</h1>
-        <p className="text-pink-600 mb-6">Link board official 💗</p>
+        <p className="text-pink-600 mb-6">Pemula 😹</p>
 
         <div className="space-y-3">
           {[
