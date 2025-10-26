@@ -10,3 +10,12 @@
 .animate-bounce-slow {
   animation: bounce-slow 3s ease-in-out infinite;
 }
+
+/* Hilangkan scrollbar horizontal */
+.scrollbar-hide::-webkit-scrollbar {
+  display: none;
+}
+.scrollbar-hide {
+  -ms-overflow-style: none;
+  scrollbar-width: none;
+}
