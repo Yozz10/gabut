@@ -3,19 +3,19 @@ import React from "react";
 export default function Linkboard() {
   const links = [
     {
-      name: "ðŸŒ¸ Channel WhatsApp",
+      name: "🌸 Channel WhatsApp",
       url: "https://whatsapp.com/channel/0029VaecgZU89ineTHYLdA42",
     },
     {
-      name: "ðŸ’¬ Grup WhatsApp",
+      name: "💬 Grup WhatsApp",
       url: "https://chat.whatsapp.com/LOp5rjjcmn61QW4BqmkJZy?mode=ems_copy_t",
     },
     {
-      name: "ðŸ“¸ Instagram",
+      name: "📸 Instagram",
       url: "https://instagram.com/",
     },
     {
-      name: "ðŸŽµ TikTok",
+      name: "🎵 TikTok",
       url: "https://tiktok.com/",
     },
   ];
@@ -35,7 +35,7 @@ export default function Linkboard() {
           className="w-28 h-28 rounded-full mx-auto border-4 border-pink-400 shadow-md animate-bounce-slow"
         />
         <h1 className="text-2xl font-semibold mt-4 text-pink-700">@Riyo</h1>
-        <p className="text-sm text-gray-600 mb-6">Link board official ðŸ’—</p>
+        <p className="text-sm text-gray-600 mb-6">Ini Bio🗿</p>
 
         {links.map((link, i) => (
           <a
@@ -54,7 +54,7 @@ export default function Linkboard() {
         </audio>
 
         <footer className="mt-6 text-xs text-gray-700">
-          Â© 2025 Made with ðŸ’– by Riyo
+          © 2025 Made with 💖 by Riyo
         </footer>
       </div>
     </div>
