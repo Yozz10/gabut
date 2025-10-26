@@ -32,18 +32,20 @@ export default function Products() {
   const waLink = "https://wa.me/6285741767752?text=Halo%20Riyo!%20Saya%20mau%20pesan%20premium%20akun%20🙏";
 
   return (
-    <div className="mt-10">
-      <h2 className="text-xl font-semibold text-pink-700 mb-4 text-center">💎 Pricelist Produk</h2>
-      <div className="grid grid-cols-1 sm:grid-cols-2 gap-4 px-3">
+    <div className="mt-10 text-center">
+      <h2 className="text-xl font-semibold text-pink-700 mb-4">💎 Pricelist Produk</h2>
+      
+      {/* Container scroll horizontal */}
+      <div className="flex overflow-x-auto space-x-4 px-3 scrollbar-hide pb-3">
         {products.map((item, i) => (
           <motion.div
             key={i}
-            whileHover={{ scale: 1.03 }}
-            whileTap={{ scale: 0.98 }}
-            className="bg-white/60 backdrop-blur-md p-4 rounded-2xl shadow-md border border-pink-200"
+            whileHover={{ scale: 1.05 }}
+            whileTap={{ scale: 0.97 }}
+            className="min-w-[220px] bg-white/60 backdrop-blur-md p-4 rounded-2xl shadow-md border border-pink-200 flex-shrink-0"
           >
             <h3 className="font-bold text-pink-700 text-lg mb-2">{item.name}</h3>
-            <ul className="text-sm text-gray-700 mb-3">
+            <ul className="text-sm text-gray-700 mb-3 text-left">
               {item.details.map((d, idx) => (
                 <li key={idx}>• {d}</li>
               ))}
@@ -54,7 +56,7 @@ export default function Products() {
               rel="noopener noreferrer"
               className="inline-block w-full text-center py-2 rounded-xl bg-gradient-to-r from-pink-400 to-pink-500 text-white font-medium hover:from-pink-500 hover:to-pink-600 transition-all"
             >
-              Pesan via WhatsApp 💬
+              Pesan 💬
             </a>
           </motion.div>
         ))}
