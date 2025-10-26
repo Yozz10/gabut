@@ -1,62 +1,49 @@
-import React from "react";
+import { motion } from "framer-motion";
 
 export default function Linkboard() {
-  const links = [
-    {
-      name: "🌸 Channel WhatsApp",
-      url: "https://whatsapp.com/channel/0029VaecgZU89ineTHYLdA42",
-    },
-    {
-      name: "💬 Grup WhatsApp",
-      url: "https://chat.whatsapp.com/LOp5rjjcmn61QW4BqmkJZy?mode=ems_copy_t",
-    },
-    {
-      name: "📸 Instagram",
-      url: "https://instagram.com/",
-    },
-    {
-      name: "🎵 TikTok",
-      url: "https://tiktok.com/",
-    },
-  ];
-
   return (
-    <div className="min-h-screen flex items-center justify-center bg-gradient-to-b from-pink-100 via-pink-200 to-pink-300 text-center p-6 relative overflow-hidden">
-      {/* Efek partikel pink lembut */}
-      <div className="absolute inset-0 pointer-events-none overflow-hidden">
-        <div className="absolute w-64 h-64 bg-pink-300/40 rounded-full blur-3xl top-[-4rem] left-[-3rem] animate-pulse"></div>
-        <div className="absolute w-72 h-72 bg-pink-400/40 rounded-full blur-3xl bottom-[-4rem] right-[-3rem] animate-pulse delay-2000"></div>
-      </div>
-
-      <div className="bg-white/40 backdrop-blur-md p-8 rounded-3xl shadow-2xl max-w-sm w-full border border-white/50 relative z-10">
-        <img
+    <div className="flex flex-col items-center justify-center min-h-screen bg-gradient-to-b from-pink-200 to-pink-400">
+      <motion.div
+        initial={{ opacity: 0, y: 30 }}
+        animate={{ opacity: 1, y: 0 }}
+        transition={{ duration: 0.8, ease: "easeOut" }}
+        className="bg-white/20 backdrop-blur-lg p-8 rounded-3xl shadow-xl text-center w-80"
+      >
+        <motion.img
           src="https://pomf2.lain.la/f/w6orjdvt.jpg"
           alt="Avatar"
-          className="w-28 h-28 rounded-full mx-auto border-4 border-pink-400 shadow-md animate-bounce-slow"
+          className="w-24 h-24 rounded-full border-4 border-pink-300 mx-auto mb-4 shadow-lg"
+          initial={{ scale: 0 }}
+          animate={{ scale: 1 }}
+          transition={{ duration: 0.6, type: "spring" }}
         />
-        <h1 className="text-2xl font-semibold mt-4 text-pink-700">@Riyo</h1>
-        <p className="text-sm text-gray-600 mb-6">Link board official 💗</p>
 
-        {links.map((link, i) => (
-          <a
-            key={i}
-            href={link.url}
-            target="_blank"
-            rel="noopener noreferrer"
-            className="block w-full py-3 my-2 rounded-xl bg-gradient-to-r from-pink-400 to-pink-500 text-white font-medium hover:from-pink-500 hover:to-pink-600 transition-all duration-300 shadow-lg"
-          >
-            {link.name}
-          </a>
-        ))}
+        <h1 className="text-2xl font-bold text-pink-700">@Riyo</h1>
+        <p className="text-pink-600 mb-6">Link board official 💗</p>
 
-        <audio autoPlay loop className="hidden">
-          <source src="/music.mp3" type="audio/mpeg" />
-        </audio>
+        <div className="space-y-3">
+          {[
+            { label: "🌸 Channel WhatsApp", link: "#" },
+            { label: "💬 Grup WhatsApp", link: "#" },
+            { label: "📸 Instagram", link: "#" },
+            { label: "🎵 TikTok", link: "#" },
+          ].map((btn, i) => (
+            <motion.a
+              key={i}
+              href={btn.link}
+              whileHover={{ scale: 1.05 }}
+              whileTap={{ scale: 0.95 }}
+              className="block bg-gradient-to-r from-pink-400 to-pink-600 text-white font-semibold py-3 rounded-xl shadow-md hover:shadow-pink-400/50 transition-all"
+            >
+              {btn.label}
+            </motion.a>
+          ))}
+        </div>
 
-        <footer className="mt-6 text-xs text-gray-700">
+        <p className="mt-6 text-xs text-pink-800">
           © 2025 Made with 💖 by Riyo
-        </footer>
-      </div>
+        </p>
+      </motion.div>
     </div>
   );
 }
