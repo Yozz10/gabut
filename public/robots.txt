@@ -1,0 +1,3 @@
+User-agent: *
+Allow: /
+Sitemap: https://[namarepo].vercel.app/sitemap.xml
